@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* , ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: hsl(235, 18%, 26%);
+}
+br {
+    user-select: none;
+}
+#box {
+    position: absolute;
+    width: 830px;
+    height: 575px;
+    background: hsl(0, 0%, 100%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px #171823;
+    transition: transform 0.3s ease-in-out, border-radius 0.3s linear, filter 0.25s ease-out;
+}
+#left_side {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: filter 0.25s ease-out;
+}
+#title {
+    position: relative;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: hsl(234, 29%, 20%);
+    font-size: 50px;
+    padding-top: 75px;
+    transition: color 0.15s ease-out;
+}
+#subtitle {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    color: hsl(234, 29%, 20%);
+    font-size: 14px;
+    padding: 22px 0 0 51px;
+    line-height: 20px;
+}
+#list {
+    position: relative;
+    padding: 22px 0 0 50px;
+    list-style-type: none;
+}
+.list_notch {
+    transform: translateY(5px);
+    padding-right: 15px;
+    user-select: none;
+}
+.element {
+    font-family: "Roboto", sans-serif;
+    color: hsl(234, 29%, 20%);
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+#form {
+    position: relative;
+    padding-top: 22px;
+}
+#form_label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: hsl(234, 29%, 20%);
+    font-size: 13px;
+    padding-left: 50px;
+}
+#form_error {
+    visibility: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: hsl(4, 100%, 67%);
+    font-size: 13px;
+    padding-left: 125px;
+}
+.error #form_error {
+    visibility: visible;
+}
+#form_text {
+    position: relative;
+    margin: 8px 0 0 52px;
+    width: 300px;
+    height: 45px;
+    border: 2px solid #e4e4e4;
+    border-radius: 7px;
+    font-family: "Roboto", sans-serif;
+    padding-left: 25px;
+}
+#form_text::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+#form_text:focus {
+    outline-color: hsl(4, 100%, 67%);
+}
+#form_submit {
+    position: relative;
+    margin: 8px 0 0 52px;
+    width: 330px;
+    height: 50px;
+    background: hsl(234, 29%, 20%);
+    border-radius: 7px;
+    border-width: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.15s ease-out;
+}
+#form_submit:hover {
+    background: hsl(4, 100%, 67%);
+}
+#right_side {
+    position: absolute;
+    right: 2.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 92%;
+    width: 45%;
+    background: url("illustration-sign-up-desktop.svg");
+    background-position: center;
+    border-radius: 15px;
+    transition: filter 0.25s ease-out;
+}
+.error #form_text {
+    border: 2px solid #ffa9a5;
+    background: #ffe8e5;
+    color: hsl(4, 100%, 67%);
+}
+.error #form_text::placeholder {
+    color: #ffa9a5;
+}
+#validated_box {
+    position: absolute;
+    width: 432px;
+    height: 460px;
+    background: hsl(0, 0%, 100%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 45px;
+    box-shadow: 2px 2px 20px #171823;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+}
+#validated_icon {
+    position: relative;
+    width: 60px;
+    left: 50px;
+    top: 50px;
+    user-select: none;
+    transition: filter 0.25s ease-out;
+}
+#validated_title {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    color: hsl(234, 29%, 20%);
+    font-size: 50px;
+    left: 50px;
+    top: 70px;
+    line-height: 45px;
+    transition: filter 0.25s ease-out;
+}
+#validated_text {
+    position: relative;
+    top: 100px;
+    font-family: "Roboto", sans-serif;
+    color: hsl(234, 29%, 20%);
+    font-size: 14px;
+    padding: 0 50px;
+    transition: filter 0.25s ease-out;
+}
+#dismiss {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    width: 330px;
+    height: 50px;
+    transform: translateX(-50%);
+    background: hsl(234, 29%, 20%);
+    border-radius: 7px;
+    border-width: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: background 0.15s ease-out, filter 0.25s ease-out;
+}
+#dismiss:hover {
+    background: hsl(4, 100%, 67%);
+}
+.end #validated_icon, .end #validated_title, .end #validated_text, .end #dismiss {
+    filter: opacity(0%);
+}
+
+@media screen and (width <= 855px) {
+    #box {
+        width: 75vw;
+        height: 98vh;
+    }
+    #left_side {
+        width: 100%;
+        height: 70%;
+        top: 37%;
+        transform: scale(125%);
+    }
+    #title {
+        white-space: nowrap;
+    }
+    #subtitle {
+        padding: 22px 0 0 0;
+        text-align: center;
+        white-space: nowrap;
+    }
+    #list {
+        padding: 22px 0 0 0;
+        text-align: center;
+        white-space: nowrap;
+    }
+    #form {
+        text-align: center;
+    }
+    #form_label {
+        padding-left: 0;
+    }
+    #form_text {
+        margin: 8px 0 0 0;
+    }
+    #form_submit {
+        margin: 8px 0 0 0;
+    }
+    #right_side {
+        left: 50%;
+        top: 25px;
+        transform: translateX(-50%);
+        height: 30%;
+        width: 90%;
+        background-size: cover;
+    }
+}
+@media screen and (580px < width <= 670px) {
+    #box {
+        padding: 50px 50px 50px 0px;
+        transform: translate(-50%, -50%) scale(90%);
+    }
+    #validated_box {
+        transform: translate(-50%, -50%) scale(90%);
+    }
+}
+@media screen and (485px < width <= 580px) {
+    #box {
+        padding: 100px 150px 150px 0px;
+        transform: translate(-50%, -50%) scale(75%);
+    }
+    #validated_box {
+        transform: translate(-50%, -50%) scale(75%);
+    }
+}
+@media screen and (430px < width <= 485px) {
+    #box {
+        padding: 150px 250px 150px 0px;
+        transform: translate(-50%, -50%) scale(60%);
+    }
+    #validated_box {
+        transform: translate(-50%, -50%) scale(60%);
+    }
+}
+@media screen and (360px < width <= 430px) {
+    #box {
+        padding: 200px 300px 200px 0px;
+        transform: translate(-50%, -50%) scale(50%);
+    }
+    #validated_box {
+        transform: translate(-50%, -50%) scale(50%);
+    }
+}

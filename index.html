@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="left_side">
+        <h1 id="title">Stay updated!</h1>
+        <p id="subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul id="list">
+          <li class="element"><img class="list_notch" src="icon-list.svg" alt="validation notch" draggable="false">Product discovery and building what matters</li>
+          <li class="element"><img class="list_notch" src="icon-list.svg" alt="validation notch" draggable="false">Measuring to ensure updates are a sucess</li>
+          <li class="element"><img class="list_notch" src="icon-list.svg" alt="validation notch" draggable="false">And much more!</li>
+        </ul>
+        <form id="form" action="">
+          <label id="form_label" for="form_text">Email address</label>
+          <label id="form_error" for="form_text">Valid email required</label>
+          <br>
+          <input id="form_text" type="text" placeholder="email@company.com" required autocomplete="off">
+          <br>
+          <input id="form_submit" type="submit" value="Subscribe to monthly newsletter">
+        </form>
+      </div>
+      <div id="right_side" aria-label="illustration image"></div>
+    </div>
+    <div id="validated_box">
+      <img id="validated_icon" src="icon-success.svg" alt="sucess icon" draggable="false">
+      <h1 id="validated_title">Thanks for subscribing!</h1>
+      <p id="validated_text">A confirmation email has been sent to <strong>[EMAIL]</strong>. Please open it and click the button inside to confirm your subscription.</p>
+      <input id="dismiss" type="button" value="Dismiss message">
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
